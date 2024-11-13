@@ -30,11 +30,11 @@ def index():
 
 
 # Uncomment the following lines of code and make a pull request to see CodeQL in action
-# @flaskapp.route("/log_injections")
-# def log_injections():
-#     data = request.args.get("data")
-#     logging.debug(data)
-#     return jsonify(data="Log injection vulnerability"), 200
+@flaskapp.route("/log_injections")
+def log_injections():
+    data = request.args.get("data")
+    logging.debug(data)
+    return jsonify(data="Log injection vulnerability"), 200
 
 
 @flaskapp.route("/config/")
